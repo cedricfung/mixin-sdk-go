@@ -1,11 +1,11 @@
-module github.com/fox-one/mixin-sdk-go/v2/example
+module github.com/fox-one/mixin-sdk-go/v3/example
 
 go 1.21.0
 
-replace github.com/fox-one/mixin-sdk-go/v2 => ../
+replace github.com/fox-one/mixin-sdk-go/v3 => ../
 
 require (
-	github.com/fox-one/mixin-sdk-go/v2 v2.0.0-00010101000000-000000000000
+	github.com/fox-one/mixin-sdk-go/v3 v2.0.0-00010101000000-000000000000
 	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c
 	github.com/rs/cors v1.10.1

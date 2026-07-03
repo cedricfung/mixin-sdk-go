@@ -5,7 +5,7 @@ Golang sdk for Mixin Network & Mixin Messenger
 
 ## Install
 
-`go get -u github.com/fox-one/mixin-sdk-go/v2`
+`go get -u github.com/fox-one/mixin-sdk-go/v3`
 
 ## Features
 
@@ -26,7 +26,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/fox-one/mixin-sdk-go/v2"
+	"github.com/fox-one/mixin-sdk-go/v3"
 )
 
 func main() {

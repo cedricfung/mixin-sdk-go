@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fox-one/mixin-sdk-go/v2/mixinnet"
+	"github.com/fox-one/mixin-sdk-go/v3/mixinnet"
 	"github.com/gorilla/websocket"
 )
 
