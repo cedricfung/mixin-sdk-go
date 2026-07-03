@@ -7,6 +7,16 @@ Golang sdk for Mixin Network & Mixin Messenger
 
 `go get -u github.com/fox-one/mixin-sdk-go/v3`
 
+## Version
+
+`v3` is the latest version. It only supports the Mixin Safe (UTXO based) network and
+has removed all the legacy APIs (e.g. legacy `Transfer`, `Withdraw`, multisig and
+collectibles).
+
+> If you need the legacy version of the APIs, please use `v2`:
+>
+> `go get -u github.com/fox-one/mixin-sdk-go/v2`
+
 ## Features
 
 * **Comprehensive** most of the Mixin Network & Mixin Messenger api supported
