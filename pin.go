@@ -12,7 +12,7 @@ import (
 )
 
 func (c *Client) VerifyPin(ctx context.Context, pin string) error {
-	body := map[string]interface{}{}
+	body := map[string]any{}
 	if key, err := mixinnet.KeyFromString(pin); err == nil {
 		timestamp := uint64(time.Now().UnixNano())
 		tipBody := []byte(fmt.Sprintf("%s%032d", TIPVerify, timestamp))
@@ -26,7 +26,7 @@ func (c *Client) VerifyPin(ctx context.Context, pin string) error {
 }
 
 func (c *Client) ModifyPin(ctx context.Context, pin, newPin string) error {
-	body := map[string]interface{}{}
+	body := map[string]any{}
 
 	if pin != "" {
 		body["old_pin"] = c.EncryptPin(pin)

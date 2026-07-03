@@ -23,12 +23,12 @@ type (
 
 func (c *Client) SafeCreateGhostKeys(ctx context.Context, inputs []*GhostInput, senders ...string) ([]*GhostKeys, error) {
 	var (
-		body interface{} = inputs
+		body any = inputs
 		resp []*GhostKeys
 	)
 
 	if len(senders) > 0 {
-		body = map[string]interface{}{
+		body = map[string]any{
 			"keys":    inputs,
 			"senders": senders,
 		}
