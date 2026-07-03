@@ -130,8 +130,13 @@ func UnmarshalResponse(resp *resty.Response, v interface{}) (err error) {
 }
 
 func extractRequestID(r *resty.Response) string {
-	if r != nil {
-		return r.Request.Header.Get(xRequestID)
+	if r != nil && r.Request != nil {
+		if requestID := r.Request.Header.Get(xRequestID); requestID != "" {
+			return requestID
+		}
+		if r.Request.RawRequest != nil {
+			return r.Request.RawRequest.Header.Get(xRequestID)
+		}
 	}
 
 	return ""
